@@ -37,12 +37,24 @@
 45010 return
 
 50000 rem function - create players
-50010 return
+50001 rem local variables; p= number players, x= loop counter, s= temp string variable
+50002 rem global variables; pl()
+50010 cls
+50020 print "how many players (2-6)"; input p; rem check for valid input
+50030 print "now decide if players are cpu / human"
+50040 for x = 1 to p
+50050 print "Is player "x" cpu/human"; input s
+50060 if s not c or h then goto 50050
+50070 if s = c then pl(x,1)=c ; pl(x,2)=cpu
+50080 if s = h then pl(x,1)=h ; gosub get name
+50090 next p
+50100 return
 
 55000 rem function - display title screen 
 55010 return
 
 60000 rem function - setup
-60010 let pl = 0 : rem pl = current player
-60020 let mp = 0 : rem mp = max number players
+60010 let pl = 0 ; rem pl = current player
+60020 let mp = 0 ; rem mp = max number players
+60030 dim pl(6,2) ; rem array of players, max 6 players, each having 2 elements. cpu/human, name
 60030 return 
