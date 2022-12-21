@@ -57,4 +57,6 @@
 60010 let pl = 0 ; rem pl = current player
 60020 let mp = 0 ; rem mp = max number players
 60030 dim pl(6,2) ; rem array of players, max 6 players, each having 2 elements. cpu/human, name
+60040 dim te(14,4 ; rem array of territory, max 14 territory, each having 3 elements?. owner (0=no one, 1-6 player), clan (0-4), score, defense
+60050 dim de(
 60030 return 
