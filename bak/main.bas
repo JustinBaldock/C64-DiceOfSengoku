@@ -1,9 +1,7 @@
 10 rem setup
 20 gosub 60000
-
 30 rem display title screen
 40 gosub 55000
-
 50 rem create players
 60 gosub 50000
 
@@ -31,7 +29,6 @@
 1020 dp(i) = 1+ int(rnd(0)*6)
 1030 next i
 1040 return
-1050 
 
 45000 rem function - display scores
 45010 return
@@ -57,6 +54,7 @@
 60010 let pl = 0 ; rem pl = current player
 60020 let mp = 0 ; rem mp = max number players
 60030 dim pl(6,2) ; rem array of players, max 6 players, each having 2 elements. cpu/human, name
-60040 dim te(14,4 ; rem array of territory, max 14 territory, each having 3 elements?. owner (0=no one, 1-6 player), clan (0-4), score, defense
-60050 dim de(
-60030 return 
+60040 dim te(14,4 ; rem array of territory, max 14 territory, each having 3 elements?.
+60041 rem owner (0=no one, 1-6 player), clan (0-4), score, defense line 
+60050 dim de()
+60060 return 
