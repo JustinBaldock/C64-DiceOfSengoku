@@ -188,26 +188,26 @@
     <expandy>False</expandy>
     <sdata>
       <data>0</data>
-      <data>0</data>
-      <data>0</data>
-      <data>0</data>
-      <data>0</data>
-      <data>0</data>
-      <data>0</data>
-      <data>0</data>
-      <data>0</data>
-      <data>0</data>
-      <data>0</data>
-      <data>0</data>
-      <data>0</data>
-      <data>0</data>
-      <data>0</data>
-      <data>0</data>
-      <data>0</data>
-      <data>0</data>
-      <data>0</data>
-      <data>0</data>
-      <data>0</data>
+      <data>262144</data>
+      <data>520192</data>
+      <data>523776</data>
+      <data>1048320</data>
+      <data>1048448</data>
+      <data>2097024</data>
+      <data>1834944</data>
+      <data>4194272</data>
+      <data>4194288</data>
+      <data>4194296</data>
+      <data>8355836</data>
+      <data>8273918</data>
+      <data>7880702</data>
+      <data>7356414</data>
+      <data>16382</data>
+      <data>32766</data>
+      <data>32766</data>
+      <data>65532</data>
+      <data>65472</data>
+      <data>63488</data>
     </sdata>
    </sprite>
     <!-- Scratchpad data -->
