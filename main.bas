@@ -64,15 +64,15 @@
 55010 print "dice of sengoku"
 55020 return
 
-59000 rem set characterset pointer to address 12288
-59010 poke 53272,(peek(53272)and240)+12
+59000 rem set characterset pointer to block 14 address 14336
+59010 poke 53272, (peek(53272)and 240)or 14
 59020 rem iterate over characters 122-127
 59030 for ch=0 to 127: 
 59040 for byte=0to7: rem 8 bytes per chacter
 59050 rem read next byte of character data (cd)
 59060 rem then save the data to the character memory
 59070 read cd 
-59080 poke 12288+(8*ch)+byte,cd
+59080 poke 14336+(8*ch)+byte,cd
 59090 rem iterate to next byte
 59100 next byte
 59110 rem do next character
