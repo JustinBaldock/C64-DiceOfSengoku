@@ -1,9 +1,10 @@
-10 rem setup
-20 gosub 60000
-30 rem display title screen
-40 gosub 55000
-50 rem create players
-60 gosub 50000
+10 rem 
+20 gosub 60000 : rem function - setup
+30 rem
+40 gosub 55000 rem function - title screen
+50 rem
+60 rem gosub 50000 : rem create players
+65 gosub 62000 :rem check dice roll
 
 70 rem process player turn
 71 rem check for available territory before each turn
@@ -59,7 +60,7 @@
 50090 next p
 50100 return
 
-55000 rem function - display title screen 
+55000 rem function - title screen
 55010 print "dice of sengoku"
 55020 return
 
@@ -181,12 +182,12 @@
 62000 rem check roll of dice
 62010 gosub 1000
 62020 for i = 0 to 6
-62030 if dp(i)=1 then di$=chr$(127)
-62040 if dp(i)=2 then di$=chr$(123)
-62050 if dp(i)=3 then di$=chr$(122)
-62060 if dp(i)=4 then di$=chr$(126)
-62070 if dp(i)=5 then di$=chr$(125)
-62080 if dp(i)=6 then di$=chr$(124)
+62030 if dp(i)=1 then di$=chr$(186)
+62040 if dp(i)=2 then di$=chr$(187)
+62050 if dp(i)=3 then di$=chr$(188)
+62060 if dp(i)=4 then di$=chr$(189)
+62070 if dp(i)=5 then di$=chr$(190)
+62080 if dp(i)=6 then di$=chr$(191)
 62090 print "dice",i,di$
 62100 next i
 62110 return
