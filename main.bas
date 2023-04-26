@@ -64,10 +64,12 @@
 50100 return
 
 51000 rem get player name
-51010 print "enterr player name": input na$
-51020 rem input is valid?
-51030 pl$(x,2)=na$
-51040 return
+51010 print "enter player name": input na$
+51020 print "name is ",na$,"correct? y/n": input ui$
+51030 if ui$ = "y" then goto 51050
+51040 goto 51010 : rem player name not correct
+51050 pl$(x,2)=na$
+51060 return
 
 55000 rem function - title screen
 55010 print "dice of sengoku"
