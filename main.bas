@@ -3,8 +3,8 @@
 30 rem
 40 gosub 55000 rem function - title screen
 50 rem
-60 rem gosub 50000 : rem create players
-65 gosub 62000 :rem check dice roll
+60 gosub 50000 : rem create players
+65 rem gosub 62000 :rem check dice roll
 
 70 rem process player turn
 71 rem check for available territory before each turn
@@ -50,15 +50,24 @@
 50002 rem x= loop counter, s= temp string variable
 50003 rem global variables; pl()
 50010 print chr$(147)
-50020 print "how many players (2-6)"; input p: rem check for valid input
-50030 print "now decide if players are cpu / human"
+50020 print "how many players (2-6)": input p
+50024 if (p<2) or (p>6) then goto 50020 : rem input was not valid input
+50030 rem print "now decide if players are cpu / human"
 50040 for x = 1 to p
-50050 print "Is player "x" cpu/human"; input s
-50060 if s not c or h then goto 50050
-50070 if s = c then pl(x,1)=c : pl(x,2)=cpu
-50080 if s = h then pl(x,1)=h : gosub get name
-50090 next p
+50050 print "is player ",x
+50055 print "cpu or human [c/h]": input s$
+50060 if (s$ = "c") or (s$ = "h") then goto 50070
+50065 goto 50055 : rem input was not valid
+50070 if s$ = "c" then pl$(x,1)="c" : pl$(x,2)="cpu"
+50080 if s$ = "h" then pl$(x,1)="h" : gosub 51000 : rem get player name
+50090 next x
 50100 return
+
+51000 rem get player name
+51010 print "enterr player name": input na$
+51020 rem input is valid?
+51030 pl$(x,2)=na$
+51040 return
 
 55000 rem function - title screen
 55010 print "dice of sengoku"
@@ -82,7 +91,7 @@
 60000 rem function - setup
 60010 let pl=0: rem pl = current player
 60020 let mp=1: rem mp = max number players
-60030 dim pl(6,2): rem array of players, max 6 players
+60030 dim pl$(6,2): rem array of players, max 6 players
 60031 rem each having 2 elements. cpu/human, name
 60040 dim te(13,11)
 60041 rem array of territory, max 14 territory, each having 11 elements?.
